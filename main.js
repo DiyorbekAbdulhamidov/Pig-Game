@@ -1,5 +1,5 @@
 import { randomNumber } from "./utils.js";
-import { FINISH_POINT, SWITCH_POINT } from "./constants.js";
+import { FINISH_POINT, SWITCH_POINT } from "./cong.js";
 // DOM VARIABLES
 const newBtn = document.querySelector(".btn--new");
 const rollBtn = document.querySelector(".btn--roll");
@@ -24,7 +24,7 @@ function togglePlayer() {
 
 function handleRoll() {
 	const num = randomNumber(6);
-	dice.src = `./assets/images/${num}.png`;
+	dice.src = `./assets/${num}.png`;
 	const point = points[currentPlayer];
 
 	const isSwitch = num === SWITCH_POINT;
@@ -41,6 +41,14 @@ function handleHold() {
 	score.innerText = total;
 	point.innerText = 0;
 
+	// if (total >= 100) {
+	// 	rollBtn.style.pointerEvents = "none";
+	// 	holdBtn.style.pointerEvents = "none";
+	// 	winPlayer = players[currentPlayer];
+	// 	winPlayer.classList.add("winner");
+	// } else {
+	// 	togglePlayer();
+	// }
 	if (total >= 100) {
 		rollBtn.style.pointerEvents = "none";
 		holdBtn.style.pointerEvents = "none";
@@ -106,3 +114,5 @@ function init() {
 }
 
 init();
+
+console.log(true);
