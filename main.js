@@ -41,14 +41,6 @@ function handleHold() {
 	score.innerText = total;
 	point.innerText = 0;
 
-	// if (total >= 100) {
-	// 	rollBtn.style.pointerEvents = "none";
-	// 	holdBtn.style.pointerEvents = "none";
-	// 	winPlayer = players[currentPlayer];
-	// 	winPlayer.classList.add("winner");
-	// } else {
-	// 	togglePlayer();
-	// }
 	if (total >= 100) {
 		rollBtn.style.pointerEvents = "none";
 		holdBtn.style.pointerEvents = "none";
